@@ -1,0 +1,24 @@
+{
+  "coding.mutable-default": {
+    "root_cause": "The function uses a shared mutable default argument, so state leaks across calls.",
+    "patch": "Change the parameter default to None and initialize a new list inside the function.",
+    "tests": [
+      "Call the function twice without a list and assert the second result starts empty.",
+      "Pass an explicit list and assert it is still used."
+    ]
+  },
+  "visual.overflow": {
+    "root_cause": "A fixed 720px child plus padding exceeds the 390px mobile viewport.",
+    "selectors": [".results-grid", ".result-card"],
+    "patch": "Use minmax(0, 1fr), set child min-width to 0, and allow long content to wrap.",
+    "verification": ["390px viewport has no horizontal overflow", "Keyboard focus remains visible"]
+  },
+  "research.claims": {
+    "claims": [
+      {"claim": "K3 has a one million token context window.", "citations": ["S1"]},
+      {"claim": "K3 is open-weight under a custom license rather than an OSI-approved license.", "citations": ["S2"]}
+    ],
+    "uncertainties": ["Provider pricing and availability can change after the cited snapshot."],
+    "recommendation": "Publish dated receipts and re-check provider metadata before paid runs."
+  }
+}

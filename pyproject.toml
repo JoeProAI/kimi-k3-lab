@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "k3lab"
+version = "0.1.0"
+description = "Cost-capped, receipt-first evaluation for agent models through OpenRouter"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+authors = [{ name = "JoePro AI", email = "joe@joepro.ai" }]
+keywords = ["kimi", "openrouter", "agents", "evaluation", "benchmark"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.scripts]
+k3lab = "k3lab.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/k3lab"]
